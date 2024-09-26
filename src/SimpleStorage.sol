@@ -3,12 +3,13 @@ pragma solidity 0.8.24; // solidity version
 
 contract SimpleStorage {
     uint256 favoriteNumber;
-    
+
     struct People {
         uint256 favoriteNumber;
         string name;
     }
     // uint256[] public anArray;
+
     People[] public people;
 
     mapping(string => uint256) public nameToFavoriteNumber;
@@ -25,4 +26,4 @@ contract SimpleStorage {
         people.push(People(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
-} 
+}
